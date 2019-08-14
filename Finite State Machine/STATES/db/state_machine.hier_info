@@ -1,0 +1,19 @@
+|state_machine
+clock => state~1.DATAIN
+reset => state~3.DATAIN
+W => Selector0.IN4
+W => state.DATAB
+W => state.DATAB
+W => state.DATAB
+W => state.DATAB
+W => state.DATAB
+W => state.DATAB
+W => state.DATAB
+W => Selector0.IN1
+W => Selector0.IN2
+W => Selector1.IN1
+W => Selector2.IN1
+W => state.DATAB
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

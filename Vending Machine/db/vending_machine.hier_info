@@ -1,0 +1,14 @@
+|vending_machine
+clock => state~9.DATAIN
+reset => state~11.DATAIN
+w[0] => process_0.IN0
+w[0] => process_0.IN0
+w[0] => process_0.IN0
+w[0] => process_0.IN0
+w[1] => process_0.IN1
+w[1] => process_0.IN1
+w[1] => process_0.IN1
+w[1] => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

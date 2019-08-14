@@ -1,0 +1,300 @@
+|ALU
+clock => DFF_sel0.CLK
+clock => DFF_sel1.CLK
+clock => DFF_cin.CLK
+clock => DFF_A0.CLK
+clock => DFF_A1.CLK
+clock => DFF_A2.CLK
+clock => DFF_A3.CLK
+clock => DFF_B0.CLK
+clock => DFF_B1.CLK
+clock => DFF_B2.CLK
+clock => DFF_B3.CLK
+clock => DFF_cout.CLK
+clock => DFF_S0.CLK
+clock => DFF_S1.CLK
+clock => DFF_S2.CLK
+clock => DFF_S3.CLK
+s[0] => DFF_sel0.DATAIN
+s[1] => DFF_sel1.DATAIN
+a[0] => DFF_A0.DATAIN
+a[1] => DFF_A1.DATAIN
+a[2] => DFF_A2.DATAIN
+a[3] => DFF_A3.DATAIN
+b[0] => DFF_B0.DATAIN
+b[1] => DFF_B1.DATAIN
+b[2] => DFF_B2.DATAIN
+b[3] => DFF_B3.DATAIN
+cin => DFF_cin.DATAIN
+output[0] <= DFF_S0.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= DFF_S1.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= DFF_S2.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= DFF_S3.DB_MAX_OUTPUT_PORT_TYPE
+cout <= DFF_cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|decoder:DECODE
+sel[0] => c.IN0
+sel[0] => c.IN0
+sel[0] => c.IN0
+sel[1] => c.IN1
+sel[1] => c.IN1
+sel[1] => c.IN1
+c[0] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= c.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX0
+input[0] => mux2:stage0_0.input[0]
+input[1] => mux2:stage0_0.input[1]
+input[2] => mux2:stage0_1.input[0]
+input[3] => mux2:stage0_1.input[1]
+sel[0] => mux2:stage0_0.sel
+sel[0] => mux2:stage0_1.sel
+sel[1] => mux2:stage1.sel
+output <= mux2:stage1.output
+
+
+|ALU|mux4:ARITHMUX0|mux2:stage0_0
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX0|mux2:stage0_1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX0|mux2:stage1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX1
+input[0] => mux2:stage0_0.input[0]
+input[1] => mux2:stage0_0.input[1]
+input[2] => mux2:stage0_1.input[0]
+input[3] => mux2:stage0_1.input[1]
+sel[0] => mux2:stage0_0.sel
+sel[0] => mux2:stage0_1.sel
+sel[1] => mux2:stage1.sel
+output <= mux2:stage1.output
+
+
+|ALU|mux4:ARITHMUX1|mux2:stage0_0
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX1|mux2:stage0_1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX1|mux2:stage1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX2
+input[0] => mux2:stage0_0.input[0]
+input[1] => mux2:stage0_0.input[1]
+input[2] => mux2:stage0_1.input[0]
+input[3] => mux2:stage0_1.input[1]
+sel[0] => mux2:stage0_0.sel
+sel[0] => mux2:stage0_1.sel
+sel[1] => mux2:stage1.sel
+output <= mux2:stage1.output
+
+
+|ALU|mux4:ARITHMUX2|mux2:stage0_0
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX2|mux2:stage0_1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX2|mux2:stage1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX3
+input[0] => mux2:stage0_0.input[0]
+input[1] => mux2:stage0_0.input[1]
+input[2] => mux2:stage0_1.input[0]
+input[3] => mux2:stage0_1.input[1]
+sel[0] => mux2:stage0_0.sel
+sel[0] => mux2:stage0_1.sel
+sel[1] => mux2:stage1.sel
+output <= mux2:stage1.output
+
+
+|ALU|mux4:ARITHMUX3|mux2:stage0_0
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX3|mux2:stage0_1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux4:ARITHMUX3|mux2:stage1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|ripple_carry:ADDER
+cin => fulladd:stage0.cin
+x[0] => fulladd:stage0.x
+x[1] => fulladd:stage1.x
+x[2] => fulladd:stage2.x
+x[3] => fulladd:stage3.x
+y[0] => fulladd:stage0.y
+y[1] => fulladd:stage1.y
+y[2] => fulladd:stage2.y
+y[3] => fulladd:stage3.y
+s[0] <= fulladd:stage0.s
+s[1] <= fulladd:stage1.s
+s[2] <= fulladd:stage2.s
+s[3] <= fulladd:stage3.s
+cout <= fulladd:stage3.cout
+
+
+|ALU|ripple_carry:ADDER|fulladd:stage0
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|ripple_carry:ADDER|fulladd:stage1
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|ripple_carry:ADDER|fulladd:stage2
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|ripple_carry:ADDER|fulladd:stage3
+cin => s.IN1
+cin => cout.IN0
+cin => cout.IN0
+x => s.IN0
+x => cout.IN0
+x => cout.IN1
+y => s.IN1
+y => cout.IN1
+y => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux2:MUX0
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux2:MUX1
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux2:MUX_2
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux2:MUX3
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux2:MUXCOUT
+input[0] => output.IN0
+input[1] => output.IN0
+sel => output.IN1
+sel => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,21 @@
+|Vhdl1
+clock => DFF_0.CLK
+clock => DFF_1.CLK
+clock => DFF_2.CLK
+clock => DFF_3.CLK
+W => PRES.IN1
+W => PRES.IN1
+W => PRES.IN1
+W => PRES.IN1
+W => PRES.IN1
+W => PRES.IN1
+W => PRES.IN1
+W => PRES.IN0
+W => PRES.IN1
+W => PRES.IN0
+W => PRES.IN0
+W => PRES.IN0
+W => PRES.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

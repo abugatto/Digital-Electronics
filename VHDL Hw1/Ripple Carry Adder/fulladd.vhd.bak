@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY fulladd IS
+	PORT(
+			cin : IN STD_LOGIC;
+			x, y : IN STD_LOGIC;
+			s, cout : OUT STD_LOGIC
+		);
+END fulladd;
+
+ARCHITECTURE logicfunc OF fulladd IS
+	BEGIN
+		s <= x XOR y XOR cin;
+		cout <= (x AND y) OR (cin AND x) OR (cin AND y);
+END logicfunc;

@@ -1,0 +1,68 @@
+|sev_seg
+input[0] => z~0.IN0
+input[0] => A~2.IN0
+input[0] => mux2:mux_3.in1
+input[1] => z~0.IN1
+input[1] => A[1].IN1
+input[1] => A~3.IN0
+input[1] => mux2:mux_2.in1
+input[1] => A[2].IN1
+input[2] => A~0.IN0
+input[2] => A~1.IN0
+input[2] => A~3.IN1
+input[2] => mux2:mux_1.in1
+input[3] => z.IN1
+input[3] => A~0.IN1
+input[3] => A~1.IN1
+input[3] => A~2.IN1
+input[3] => mux2:mux_0.in1
+led[0] <= led~3.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led~6.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led~7.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led~11.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= led~13.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= led~19.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= led~25.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= <GND>
+led_carry[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+led_carry[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+led_carry[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
+led_carry[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+led_carry[4] <= <VCC>
+led_carry[5] <= <VCC>
+led_carry[6] <= <GND>
+led_carry[7] <= <GND>
+
+
+|sev_seg|mux2:mux_0
+in1 => output~0.IN0
+in2 => output~1.IN0
+sel => output~1.IN1
+sel => output~0.IN1
+output <= output~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sev_seg|mux2:mux_1
+in1 => output~0.IN0
+in2 => output~1.IN0
+sel => output~1.IN1
+sel => output~0.IN1
+output <= output~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sev_seg|mux2:mux_2
+in1 => output~0.IN0
+in2 => output~1.IN0
+sel => output~1.IN1
+sel => output~0.IN1
+output <= output~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sev_seg|mux2:mux_3
+in1 => output~0.IN0
+in2 => output~1.IN0
+sel => output~1.IN1
+sel => output~0.IN1
+output <= output~2.DB_MAX_OUTPUT_PORT_TYPE
+
+
